@@ -1,0 +1,113 @@
+name: LABMATT_SERVER_CONTROLLER
+version: -alpha
+main: space.labmatt.labmatt_server_controller.LABMATT_SERVER_CONTROLLER
+api-version: 1.13
+prefix: LMSC
+authors: [Matthew, Lewington]
+description: LABATT Server Controller provides fundamental commands and must have tools for server adminstators and         players.
+website: www.labmatt.space
+
+commands:
+
+  lmstat:
+    description:  Returns Summary of server stats.
+    usage: "/<lmstat>"
+
+  home:
+    description: Sends player to set home point.
+    usage: "/home [home number]"
+
+  sethome:
+    description: Sets player home point.
+    usage: "/sethome [home number]"
+
+  rmhome:
+    description: Removes a players home.
+    usage: "/rmhome [home number]"
+
+  back:
+    description: Sends a player to there last death point.
+    usage: "/back"
+
+  lc:
+    description: Locks the Chest, Door, Furnace your looking at to certan players. Your name is added by defualt.
+    usage: "/<lc> [Other user] [Other user... ect]"
+
+  See:
+    description: Displays the name and location of the block your looking at.
+    usage: "/see"
+
+  cleanlc:
+    description: (Adminstror use only) Cleans lock config file of invaild locks.
+    usage: "/cleanlc"
+
+  unlc:
+    description: Unlocks the chest your looking at.
+    usage: "/unlc"
+  dis:
+    description: (Adminstror use only)  Gets Distance between two players.
+    usage: "/dis <player1> <player2>"
+
+  players:
+    description: Gets the players that are online.
+    usage: "/players"
+
+  ham:
+    description: Toggles Hammer for pickaxes on/off
+    usage: "/ham"
+
+  feedback:
+    description: Used to send feedback or errors to server Administrators.
+    usage: "/feedback <Message text>"
+
+  lmsctg:
+    description: LMSC TOGGLE, To be used by Administrators to change settings of the LMSC plugin.
+    useage: "/lmsctg <Setting Name(Case sensive)> <true or false>"
+
+  lmscClean:
+    description: Used by Adminstaros to manual trigger a LMSC clean event. This Optimises and saves Configs.
+    usage: "/lmscClean"
+
+  #claim:
+   # description: Used to request claims of land. Stand at one point and use /claim. Stand at second point type /claim.
+    #usage: "/claim"
+
+  inv:
+    description: Used by Aminstators to view other players inventorys.
+    usage: "/inv <plr name>"
+
+  #a:
+   # description: Used By Devs to add locked items to lock list. Look at block to add to config. add print to list in server console.
+    #usage: "/a or /a print"
+
+  #seen:
+   # description: Gets the last time a player was seen on the server.
+    #usage: "/seen <player>"
+
+  addWorld:
+    description:  Add world to server.
+    usage: "/addworld <world Name>"
+
+  reloadWorlds:
+    description: Reloads added worlds into active world pool.
+    usage: "/reloadWorlds"
+
+  loadWorld:
+    description: Loads world form the LMSC active worlds file.
+    usage: "/loadWorld <world name>"
+
+  unloadWorld:
+    description: Unoads world form the LMSC active worlds file. Place world in unactive world file. Would will not be loaded on server boot, or /reloadworlds.
+    usage: "/loadWorld <world name>"
+
+  listWorlds:
+    description: Lists the worlds currently loaded on the server.
+    usage: "/listworld"
+
+  tpworld:
+    description: Teleports players to a diffrent world.
+    usage: "/tpworld <world name> <player> [antoher player] [another player] [more players etc...]"
+
+  rmtpworld:
+    description: Removes a players last postion in a would.
+    usage: "/rmtphome <world> <player>"

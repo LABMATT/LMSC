@@ -1,0 +1,40 @@
+#LABMATT SERVER CONTROLLER. SETTINGS
+#Storm Breaker(diamonad axes named storm braker will stright ligthing where clicked)
+StormBreaker: false
+
+#allows items to be locked using /lc
+locktool: true
+
+#adds GUI to server.
+GUI: false
+
+#allows custom server personalisation like join messages.
+lmscspice: true
+
+#shows debug info from plugin actions.(very spamy and for dev perposes only.) DebugToOps sends debug info to server ops
+debug: false
+debugToOps: false
+
+#Allows players you set and return to set homes.
+home: true
+
+back: true
+
+#Allows player Feedback
+Feedback: true
+
+#prevents pets and named animals from been damaged. Reports a damage event to a its owner.
+petprotec: true
+petprotecreport: true
+
+hammer: false
+
+landguard: false
+
+invsnoop: true
+craftextra: false
+custom_game_rules: false
+ShulkerInv: false
+chatColours: false
+regWorld: false
+Signage: false
