@@ -14,47 +14,30 @@ import space.labmatt.labmatt_server_controller.LABMATT_SERVER_CONTROLLER;
 import java.io.File;
 import java.util.List;
 
-public class TpWorld implements CommandExecutor {
+public class TpWorld {
 
-    //usage in main plugin
-    private final LABMATT_SERVER_CONTROLLER plugin;
-
-    public TpWorld(LABMATT_SERVER_CONTROLLER plugin) {
-        this.plugin = plugin;
-        PluginCommand command = plugin.getCommand("tpworld");
-
-        if (command != null) {
-            command.setExecutor(this);
-        }
-    }
-
-
-    //gets all the command in data
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    TpWorld(LABMATT_SERVER_CONTROLLER plugin, CommandSender sender, String[] args) {
         ConfigManger config = new ConfigManger(plugin);
 
-
-        if (command.getName().equalsIgnoreCase("tpworld") && args.length != 0) {
 
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if (!player.isOp()) {
                     sender.sendMessage(ChatColor.DARK_RED + "You must be Op to use this command.");
-                    return true;
+                    return;
                 }
             }
 
 
             //Gets all the players names mentioned.
-            String worldname = args[0];
+            String worldname = args[1];
 
             if (worldname.length() > 0) {
 
                 World world = plugin.getServer().getWorld(worldname);
                 if (world != null) {
-                    for (int i = 1; i < args.length; i++) {
-                        if (args[i].length() > 3) {
+                    for (int i = 2; i < args.length; i++) {
+                        if (args[i].length() > 4) {
                             Player player = plugin.getServer().getPlayer(args[i]);
 
                             if(player != null) {
@@ -103,8 +86,8 @@ public class TpWorld implements CommandExecutor {
                                         loc = new Location(plugin.getServer().getWorld(plrWorld[0]), plrLocation[0], plrLocation[1], plrLocation[2], pitchYaw[3], pitchYaw[4]);
                                     } catch (Exception e)
                                     {
-                                        sender.sendMessage(ChatColor.RED + "There was an error sending <" + args[1] + "> to <" + args[0] + ">.");
-                                        return true;
+                                        sender.sendMessage(ChatColor.RED + "There was an error sending <" + args[2] + "> to <" + args[1] + ">.");
+                                        return;
                                     }
 
                                 } else {
@@ -116,17 +99,15 @@ public class TpWorld implements CommandExecutor {
                             } else {
 
                                 sender.sendMessage(ChatColor.RED + "Could not find player <" + args[i] + ">.");
-                                return true;
+                                return;
                             }
                         }
                     }
                 } else {
-                    sender.sendMessage(ChatColor.RED + "No world <" + args[0] + "> loaded in server.");
+                    sender.sendMessage(ChatColor.RED + "No world <" + args[1] + "> loaded in server.");
                 }
-                return true;
+                return;
             }
-        }
 
-        return false;
     }
 }

@@ -84,30 +84,6 @@ commands:
    # description: Gets the last time a player was seen on the server.
     #usage: "/seen <player>"
 
-  addWorld:
-    description:  Add world to server.
-    usage: "/addworld <world Name>"
-
-  reloadWorlds:
-    description: Reloads added worlds into active world pool.
-    usage: "/reloadWorlds"
-
-  loadWorld:
-    description: Loads world form the LMSC active worlds file.
-    usage: "/loadWorld <world name>"
-
-  unloadWorld:
-    description: Unoads world form the LMSC active worlds file. Place world in unactive world file. Would will not be loaded on server boot, or /reloadworlds.
-    usage: "/loadWorld <world name>"
-
-  listWorlds:
-    description: Lists the worlds currently loaded on the server.
-    usage: "/listworld"
-
-  tpworld:
-    description: Teleports players to a diffrent world.
-    usage: "/tpworld <world name> <player> [antoher player] [another player] [more players etc...]"
-
-  rmtpworld:
-    description: Removes a players last postion in a would.
-    usage: "/rmtphome <world> <player>"
+  world:
+    description:  Can modified current worlds on server.
+    usage: "/world <add/remove or load/unload or tp> [world name] <user name for tp if needed>"

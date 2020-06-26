@@ -1,27 +1,20 @@
 package Tools.LMSCWorldManger;
 
-import Mangers.ConfigManger;
 import org.bukkit.ChatColor;
-import org.bukkit.World;
-import org.bukkit.WorldCreator;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.entity.Player;
 import space.labmatt.labmatt_server_controller.LABMATT_SERVER_CONTROLLER;
-
-import java.io.File;
-import java.util.List;
 
 public class WorldCommands implements CommandExecutor {
 
     //usage in main plugin
     private final LABMATT_SERVER_CONTROLLER plugin;
 
-    public WorldCommands(LABMATT_SERVER_CONTROLLER plugin) {
+    WorldCommands(LABMATT_SERVER_CONTROLLER plugin) {
         this.plugin = plugin;
-        PluginCommand command = plugin.getCommand("addworld");
+        PluginCommand command = plugin.getCommand("world");
 
         if (command != null) {
             command.setExecutor(this);
@@ -32,28 +25,50 @@ public class WorldCommands implements CommandExecutor {
     //gets all the command in data
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        ConfigManger config = new ConfigManger(plugin);
 
         if(args[0] != null)
         {
-            if (command.getName().equalsIgnoreCase("addworld")) {
+            args[0] = args[0].toLowerCase();
+
+            if (command.getName().equalsIgnoreCase("world")) {
 
                 switch(args[0])
                 {
+                    // If Adding world then go to the add world function.
                     case "add":
+                        new AddWorld(plugin, sender, args);
+                        return true;
 
-                        break;
+                    // If removing world form server then go to remove function.
                     case "remove":
 
                         break;
 
-                    case "act":
+                    // If to activate a world then preform the world activation function.
+                    case "load":
+                        new LoadWorld(plugin, sender, args);
+                        return true;
 
-                        break;
+                    // If to deactivate a world then preform the world activation function.
+                    case "unload":
+                        new UnloadWorld(plugin, sender, args);
+                        return true;
 
-                    case "deact":
+                    case "list":
+                        new ListWorlds(plugin, sender, args);
+                        return true;
 
-                        break;
+                    case "reload":
+                        new ReloadWorlds(plugin, sender, args);
+                        return true;
+
+                    case "tp":
+                        new TpWorld(plugin, sender, args);
+                        return true;
+
+                    case "removetp":
+                        new TpWorldRemove(plugin, sender, args);
+                        return true;
 
                     default:
                         sender.sendMessage(ChatColor.DARK_RED + "Unknown argument <" + args[0] + ">");
