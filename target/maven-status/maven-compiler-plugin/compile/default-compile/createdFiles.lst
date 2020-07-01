@@ -6,6 +6,8 @@ Mangers\ScoreBoardManger.class
 Tools\ChatColours\ChatColoursEvent.class
 Commands\ToggleLMSCSetting.class
 Tools\Signage\RegisterSignage.class
+Tools\AdvancedMechanics\BlockBrakerCraft.class
+Mangers\SQL_Manger\lmsc_SQL.class
 Tools\InvShulker\OpenShulker.class
 Tools\LMSCWorldManger\ListWorlds.class
 Tools\Lock\Register_Lock_Tool.class
@@ -24,6 +26,7 @@ Tools\TreeChop\treeChop_Event.class
 Tools\CraftExtra\RegisterCraftCraftExtra.class
 Commands\Stat.class
 Tools\Lock\Lock_Under_Explode_Event.class
+Tools\AdvancedMechanics\RegisterAdvancedMechanics.class
 Tools\LogStrip\RegisterLogStrip.class
 Tools\Home\RegisterHomeTool.class
 Tools\LMSCWorldManger\InvConfigUpdate.class
@@ -66,6 +69,7 @@ Tools\LMSCWorldManger\WorldCommands.class
 Tools\Lock\Lock_Clean_Config.class
 space\labmatt\labmatt_server_controller\TaskSetup.class
 Tools\Lock\Set_Correct_BlockType.class
+Tools\AdvancedMechanics\BlockBraker.class
 Tools\PetProtec\Petprotec_Event_Inventory_Horse.class
 Tools\Lock\Lock_Get_Locked_Items.class
 Tools\Home\Remove_Home_Command.class
@@ -90,6 +94,7 @@ Tools\PetProtec\PetProtec_Event_Player_Leave.class
 Tools\LMSCWorldManger\LoadWorld.class
 space\labmatt\labmatt_server_controller\ToolSetup.class
 Tools\TreeChop\OakTree.class
+Tools\AdvancedMechanics\BlockBrakerRedstoneEvent.class
 Commands\GetPlayers.class
 Tools\PetProtec\Petprotec_Event_Leash.class
 Tools\LandGuard\RequestCreateClaim.class

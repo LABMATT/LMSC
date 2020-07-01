@@ -10,7 +10,7 @@ import space.labmatt.labmatt_server_controller.LABMATT_SERVER_CONTROLLER;
 import java.io.File;
 import java.util.List;
 
-public class UnloadWorld {
+class UnloadWorld {
 
 UnloadWorld(LABMATT_SERVER_CONTROLLER plugin, CommandSender sender, String[] args) {
         ConfigManger config = new ConfigManger(plugin);

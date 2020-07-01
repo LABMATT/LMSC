@@ -1,6 +1,7 @@
 package space.labmatt.labmatt_server_controller;
 
 import Mangers.ColourConvert;
+import Tools.AdvancedMechanics.RegisterAdvancedMechanics;
 import Tools.ChatColours.RegisterChatColours;
 import Tools.CraftExtra.RegisterCraftCraftExtra;
 import Tools.CustomGameRule.RegisterCustomGameRules;
@@ -59,6 +60,7 @@ class ToolSetup {
         chColour.regChatcolour();
         registerLMSCWorldManger.registerLMSCWorldManger();
         signage.registerSignage();
+        new RegisterAdvancedMechanics(plugin);
 
         plugin.getServer().getPluginManager().registerEvents(new Block_Prevent_Log_Strip(plugin), plugin);
 
