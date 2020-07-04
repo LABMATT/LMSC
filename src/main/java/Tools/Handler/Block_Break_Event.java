@@ -22,6 +22,7 @@ public class Block_Break_Event implements Listener  {
     public void blockBroken(BlockBreakEvent event) {
         Logout log = new Logout(plugin);
 
+        new Handler_SQlite_Manger(plugin);
 
     }
 }

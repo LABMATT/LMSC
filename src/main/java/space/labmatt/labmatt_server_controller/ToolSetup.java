@@ -6,6 +6,7 @@ import Tools.ChatColours.RegisterChatColours;
 import Tools.CraftExtra.RegisterCraftCraftExtra;
 import Tools.CustomGameRule.RegisterCustomGameRules;
 import Tools.Hammer.RegisterHammer;
+import Tools.Handler.RegisterHandler;
 import Tools.Home.RegisterHomeTool;
 import Tools.InvShulker.RegisterInvShulker;
 import Tools.InventorySnooper.RegisterInventorySnooper;
@@ -44,6 +45,7 @@ class ToolSetup {
         ColourConvert colourConvert = new ColourConvert();
         RegisterLMSCWorldManger registerLMSCWorldManger = new RegisterLMSCWorldManger(plugin);
         RegisterSignage signage = new RegisterSignage(plugin);
+        RegisterHandler registerHandler = new RegisterHandler(plugin);
 
         colourConvert.setHash();
         hammer.registerHammer();
@@ -60,6 +62,8 @@ class ToolSetup {
         chColour.regChatcolour();
         registerLMSCWorldManger.registerLMSCWorldManger();
         signage.registerSignage();
+        registerHandler.registerHandler();
+
         new RegisterAdvancedMechanics(plugin);
 
         plugin.getServer().getPluginManager().registerEvents(new Block_Prevent_Log_Strip(plugin), plugin);
