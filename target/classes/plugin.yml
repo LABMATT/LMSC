@@ -87,3 +87,11 @@ commands:
   world:
     description:  Can modified current worlds on server.
     usage: "/world <add/remove or load/unload or tp> [world name] <user name for tp if needed>"
+
+  fcb:
+    description: Find Command block -> shows a list of command blocks that have triggered in a location.
+    usage: "/fcb"
+
+  cinema:
+    description: Uses by admins to change movie screens.
+    usage: "/cinema"

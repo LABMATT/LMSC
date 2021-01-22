@@ -38,7 +38,7 @@ class Set_New_Home {
                 return;
             }
 
-            if(num > maxhomes)
+            if(num > maxhomes | num < 0)
             {
                 plr.sendMessage(ChatColor.RED + "You can have a maximum of <" + maxhomes + "> homes on this server.");
                 return;

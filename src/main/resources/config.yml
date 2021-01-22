@@ -40,3 +40,5 @@ regWorld: false
 Signage: false
 AdvancedMechanics: false
 handler: false
+cbf: true
+cinema: false

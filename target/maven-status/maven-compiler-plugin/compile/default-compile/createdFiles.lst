@@ -9,6 +9,8 @@ Tools\Signage\RegisterSignage.class
 Tools\AdvancedMechanics\BlockBrakerCraft.class
 Mangers\SQL_Manger\lmsc_SQL.class
 Tools\InvShulker\OpenShulker.class
+Tools\Cinema\CinemaCommand$1.class
+Tools\Cinema\mapIni.class
 Tools\LMSCWorldManger\ListWorlds.class
 Tools\Lock\Register_Lock_Tool.class
 Tools\CraftExtra\CraftSpawner.class
@@ -16,7 +18,9 @@ Tools\CustomGameRule\RegisterCustomGameRules.class
 Tools\Home\Send_Player_Home.class
 ExternalManger\PlayersWindow.class
 Tools\FeedBackSystem\FeedBackCommand.class
+Tools\Handler\Handler_SQlite_Manger.class
 Tools\InventorySnooper\RegisterInventorySnooper.class
+Tools\CommandBlockFinder\RegisterCBF.class
 Tools\InventorySnooper\InventorySnooperCommand.class
 Tools\Lock\Lock_Check.class
 Tools\LandGuard\RegisterLandGuard.class
@@ -38,6 +42,7 @@ Tools\TreeChop\treeChop_Event$1.class
 Tools\Lock\Lock_Block_Broken_Near_Locked_Event.class
 Tools\LMSC_Personalisation\Register_LMSC_Rersonalisation.class
 Tools\Lock\Lock_Explosion_Damage.class
+Tools\Cinema\mapIni$1.class
 Tools\LMSCWorldManger\ReloadloadAllWorlds.class
 Tools\Lock\Lock_Redstone_event.class
 Tools\Lock\Lock_Event_Villeger.class
@@ -53,6 +58,7 @@ Tools\PetProtec\RegisterPetProtec.class
 space\labmatt\labmatt_server_controller\LABMATT_SERVER_CONTROLLER.class
 Tools\Lock\Lock_Create_Override.class
 Mangers\ColourConvert.class
+Tools\Cinema\CinemaCommand.class
 Tools\PetProtec\UnTagEvent.class
 Commands\GetDistanceBetweenPlayers.class
 Tools\Home\Set_Home_Command.class
@@ -71,18 +77,21 @@ space\labmatt\labmatt_server_controller\TaskSetup.class
 Tools\Lock\Set_Correct_BlockType.class
 Tools\AdvancedMechanics\BlockBraker.class
 Tools\PetProtec\Petprotec_Event_Inventory_Horse.class
+Tools\Cinema\PushFrame$1.class
 Tools\Lock\Lock_Get_Locked_Items.class
 Tools\Home\Remove_Home_Command.class
 space\labmatt\labmatt_server_controller\EventSetup.class
 Tools\InvShulker\RegisterInvShulker.class
 Tools\Lock\Lock_Edit_Locked_Items.class
 Tools\PetProtec\PreventCreeper.class
+Tools\Cinema\RegisterCinema.class
 Action\LMSCcleanup.class
 Tools\Home\Back_Command.class
 Tools\LMSC_Personalisation\PlayerJoinEvent.class
 Tools\PetProtec\Petprotec_Event_Mount_Horse.class
 Tools\LMSCWorldManger\AddWorld.class
 SubActions\Scheduler.class
+Tools\Cinema\PushFrame.class
 Tools\Hammer\HammerDisconnectEvent.class
 Tools\Home\Set_New_Home.class
 Tools\Lock\Lock_Get_Block_Types.class
@@ -112,7 +121,6 @@ Tools\Lock\Lock_Events.class
 Tools\AdminTools\Last_Seen.class
 Tools\CustomGameRule\Event_Creeper_Explode.class
 Commands\PlayMusic.class
-Tools\StorysAroundTheFire\EventSummonStorys.class
 Tools\LMSCWorldManger\InventoryManger\EventPlayerChangeWorlds.class
 Commands\PizzaTime.class
 Tools\PetProtec\PetProtecEvent.class
@@ -124,9 +132,10 @@ Tools\LogStrip\Block_Prevent_Log_Strip.class
 Commands\See.class
 Tools\ChatColours\RegisterChatColours.class
 Tools\Lock\Lock_Get_Second_Block.class
+Tools\CommandBlockFinder\LogCommandBlockEvent.class
 Mangers\LMSCsettingsManger.class
 Tools\Hammer\HammerToggle.class
-Tools\StorysAroundTheFire\RegisterStorysAroundTheFire.class
+Tools\CommandBlockFinder\FindCommandBloacksCommand.class
 Tools\PetProtec\UnTameEvent.class
 Tools\LMSCWorldManger\UnloadWorld.class
 Tools\Hammer\RegisterHammer.class

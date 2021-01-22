@@ -3,6 +3,8 @@ package space.labmatt.labmatt_server_controller;
 import Mangers.ColourConvert;
 import Tools.AdvancedMechanics.RegisterAdvancedMechanics;
 import Tools.ChatColours.RegisterChatColours;
+import Tools.Cinema.RegisterCinema;
+import Tools.CommandBlockFinder.RegisterCBF;
 import Tools.CraftExtra.RegisterCraftCraftExtra;
 import Tools.CustomGameRule.RegisterCustomGameRules;
 import Tools.Hammer.RegisterHammer;
@@ -46,6 +48,8 @@ class ToolSetup {
         RegisterLMSCWorldManger registerLMSCWorldManger = new RegisterLMSCWorldManger(plugin);
         RegisterSignage signage = new RegisterSignage(plugin);
         RegisterHandler registerHandler = new RegisterHandler(plugin);
+        RegisterCBF registerCBF = new RegisterCBF(plugin);
+        RegisterCinema registerCinema = new RegisterCinema(plugin);
 
         colourConvert.setHash();
         hammer.registerHammer();
@@ -63,6 +67,9 @@ class ToolSetup {
         registerLMSCWorldManger.registerLMSCWorldManger();
         signage.registerSignage();
         registerHandler.registerHandler();
+        registerCinema.registerCinemaSystems();
+        registerCBF.registerCommandBlockFinder();
+
 
         new RegisterAdvancedMechanics(plugin);
 
